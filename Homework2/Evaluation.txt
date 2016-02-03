@@ -1,0 +1,13 @@
+Thank you for the kind words regarding my hat!  :-)
+
+Also, nice use of the Random class to generate a random number.  One minor
+suggestion...if you want the random number "between 0 and 100" to possibly
+include 100 (as it includes 0), you will need to actually request 
+rand.Next(0, 101), as the Next() method takes an inclusive lower bound
+and an exclusive upper bound (that is, the lower bound is a possible
+response value, but the upper bound is not).  See 
+http://msdn.microsoft.com/en-us/library/2dx6wyd4.aspx for details.
+
+Of course, you could reasonably argue that "between 0 and 100" should not
+include the value "100", since, after all, in C#'s implementation of 
+Random, it doesn't...
